@@ -159,6 +159,9 @@ function svg_image_field_formatter_view($entity_type, $entity, $field, $instance
           $item[$attribute] = (int) $attribute_value;
         }
       }
+
+      // Add role="img" for screen readers (so they read the alt text)
+      $item['attributes']['role'] = 'img';
     }
 
     $element[$delta] = array(
