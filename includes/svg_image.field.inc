@@ -164,7 +164,7 @@ function svg_image_field_formatter_view($entity_type, $entity, $field, $instance
     $element[$delta] = array(
       '#theme' => 'image_formatter',
       '#item' => $item,
-      '#image_style' => $is_svg === FALSE ? $display['settings']['image_style'] : '',
+      '#image_style' => $display['settings']['image_style'], // Keep a selected image style
       '#path' => isset($uri) ? $uri : '',
     );
   }
